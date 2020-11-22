@@ -25,6 +25,10 @@
     gl_Position.x += 0.5f;
 #endif
 
+#ifdef WEATHER
+    gl_Position.x += 0.5f;
+#endif
+
     // 
     gl_Position.xy = gl_Position.xy * 2.f - 1.f;
     gl_Position *= deferW;
