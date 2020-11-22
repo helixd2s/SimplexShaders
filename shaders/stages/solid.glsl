@@ -119,6 +119,10 @@ void main() {
     coordf.x -= 1.f;
 #endif
 
+#ifdef BASIC
+    coordf.x -= 1.f;
+#endif
+
     // 
     vec4 viewpos = gbufferProjectionInverse * vec4(coordf * 2.f - 1.f, gl_FragCoord.z, 1.f); viewpos /= viewpos.w;
     vec3 worldview = normalize(viewpos.xyz);
