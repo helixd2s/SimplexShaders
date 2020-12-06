@@ -53,6 +53,7 @@ uniform vec3 cameraPosition;
 //    return a*a;
 //}
 
+/*  // REPLACED by SRAA
 vec4 getSmoothTransparent(in ivec2 texcoord){
     float alpha = 0.f, sampled = 0.f;
     vec3 color = vec3(0.f.xxx);
@@ -67,6 +68,7 @@ vec4 getSmoothTransparent(in ivec2 texcoord){
     }
     return vec4(color/max(alpha,1.f),clamp(sampled/max(alpha,1.f), 0.f, 1.f));
 }
+*/
 
 void main() {
     ivec2 gtexcoord = ivec2(vtexcoord * vec2(viewWidth, viewHeight)) / 2;
