@@ -82,6 +82,11 @@ uniform sampler2D depthtex0;
 
 uniform int frameCounter; 
 
+#ifdef EARLY_FRAG_TEST
+// NOT SUPPORT SPLIT SCREEN (REQUIRED EXPLICIT CULLING)
+//layout(early_fragment_tests) in;
+#endif
+
 void main() {
 #ifdef VERTEX_SHADER
 	texcoord = gl_TextureMatrix[0] * gl_MultiTexCoord0;
