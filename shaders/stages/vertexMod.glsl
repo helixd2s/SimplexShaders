@@ -5,6 +5,9 @@
     // 
     gl_Position.xy = gl_Position.xy * 0.5f + 0.5f;
 
+    // compute real-position
+    //position = gl_Position;
+
     // split screen 
     gl_Position.xy *= 0.5f;
     

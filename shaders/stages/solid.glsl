@@ -90,12 +90,14 @@ uniform int frameCounter;
 void main() {
 #ifdef VERTEX_SHADER
 	texcoord = gl_TextureMatrix[0] * gl_MultiTexCoord0;
-	
+
 	position = gbufferModelViewInverse * gl_ModelViewMatrix * gl_Vertex;
     position.xyz += cameraPosition;
 
 	gl_Position = gl_ProjectionMatrix * (gbufferModelView * (position - vec4(cameraPosition, 0.f)));
-	
+
+    position = gl_Position / gl_Position.w;
+
 	color = gl_Color;
 	
 	lmcoord = gl_TextureMatrix[1] * gl_MultiTexCoord1;
