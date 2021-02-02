@@ -28,7 +28,7 @@ I'm NOT made super-sampling upscaling
 ### Planar Reflection
 
 Due Optifine limitations, there is NOT possible to make planar reflections in such shader pack<br>
-Main problem: getting required plane level...
+Main problem: getting required plane level...<br>
 **TODO: Planned to resolve that problem with my new extensions for Optifine**
 
 ### Far future
